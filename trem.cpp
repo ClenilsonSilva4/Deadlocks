@@ -6,7 +6,7 @@ Trem::Trem(int ID, int x, int y){
     this->ID = ID;
     this->x = x;
     this->y = y;
-    velocidade = 100;
+    this->velocidade = 100;
 }
 
 //Função a ser executada após executar trem->START
@@ -75,6 +75,8 @@ void Trem::run(){
     }
 }
 
-
+void Trem::setVelocidade(int newVelocidade) {
+    this->velocidade = newVelocidade;
+}
 
 

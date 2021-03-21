@@ -79,3 +79,34 @@ void MainWindow::on_pushButton_2_clicked()
     trem4->terminate();
     trem5->terminate();
 }
+
+void MainWindow::on_sliderTrem1_sliderMoved(int position)
+{
+    trem1->setVelocidade(100-position);
+}
+
+
+void MainWindow::on_sliderTrem1_valueChanged(int value)
+{
+
+}
+
+void MainWindow::on_sliderTrem2_sliderMoved(int position)
+{
+    trem2->setVelocidade(100-position);
+}
+
+void MainWindow::on_sliderTrem3_sliderMoved(int position)
+{
+    trem3->setVelocidade(100-position);
+}
+
+void MainWindow::on_sliderTrem4_sliderMoved(int position)
+{
+    trem4->setVelocidade(100-position);
+}
+
+void MainWindow::on_sliderTrem5_sliderMoved(int position)
+{
+    trem5->setVelocidade(100-position);
+}
