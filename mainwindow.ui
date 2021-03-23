@@ -400,6 +400,9 @@
      </rect>
     </property>
     <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="sliderPosition">
      <number>100</number>
     </property>
     <property name="orientation">
@@ -416,6 +419,9 @@
      </rect>
     </property>
     <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="sliderPosition">
      <number>100</number>
     </property>
     <property name="orientation">
@@ -432,6 +438,9 @@
      </rect>
     </property>
     <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="sliderPosition">
      <number>100</number>
     </property>
     <property name="orientation">
@@ -448,6 +457,9 @@
      </rect>
     </property>
     <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="sliderPosition">
      <number>100</number>
     </property>
     <property name="orientation">
@@ -464,13 +476,13 @@
      </rect>
     </property>
     <property name="maximum">
-     <number>100</number>
+     <number>200</number>
     </property>
     <property name="value">
-     <number>1</number>
+     <number>100</number>
     </property>
     <property name="sliderPosition">
-     <number>1</number>
+     <number>100</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>

@@ -6,7 +6,7 @@ Trem::Trem(int ID, int x, int y){
     this->ID = ID;
     this->x = x;
     this->y = y;
-    this->velocidade = 100;
+    this->velocidade = 200;
 }
 
 //Função a ser executada após executar trem->START

@@ -82,7 +82,13 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_sliderTrem1_sliderMoved(int position)
 {
-    trem1->setVelocidade(100-position);
+
+    trem1->setVelocidade(200-position);
+    if(position == 0) {
+        trem1->terminate();
+    } else {
+        trem1->start();
+    }
 }
 
 
@@ -93,20 +99,40 @@ void MainWindow::on_sliderTrem1_valueChanged(int value)
 
 void MainWindow::on_sliderTrem2_sliderMoved(int position)
 {
-    trem2->setVelocidade(100-position);
+    trem2->setVelocidade(200-position);
+    if(position == 0) {
+        trem2->terminate();
+    } else {
+        trem2->start();
+    }
 }
 
 void MainWindow::on_sliderTrem3_sliderMoved(int position)
 {
-    trem3->setVelocidade(100-position);
+    trem3->setVelocidade(200-position);
+    if(position == 0) {
+        trem3->terminate();
+    } else {
+        trem3->start();
+    }
 }
 
 void MainWindow::on_sliderTrem4_sliderMoved(int position)
 {
-    trem4->setVelocidade(100-position);
+    trem4->setVelocidade(200-position);
+    if(position == 0) {
+        trem4->terminate();
+    } else {
+        trem4->start();
+    }
 }
 
 void MainWindow::on_sliderTrem5_sliderMoved(int position)
 {
-    trem5->setVelocidade(100-position);
+    trem5->setVelocidade(200-position);
+    if(position == 0) {
+        trem5->terminate();
+    } else {
+        trem5->start();
+    }
 }
