@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    trem.cpp
+    sinal.cpp \
+    trem.cpp \
+    trilhoCompartilhado.cpp
 
 HEADERS  += mainwindow.h \
-    trem.h
+    sinal.h \
+    trem.h \
+    trilhoCompartilhado.h
 
 FORMS    += mainwindow.ui
