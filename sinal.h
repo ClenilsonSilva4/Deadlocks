@@ -23,8 +23,8 @@ signals:
 
 private:
    int ID;          //ID do sinal
-   int milisegundos; //Tempo para abrir ou fechar o sinal
-   bool aberto;  //Se esta aberto ou fechado
+   int tempoAcao; //Tempo para abrir ou fechar o sinal
+   bool estado;  //Se esta aberto ou fechado
 
 public:
     bool estaAberto();

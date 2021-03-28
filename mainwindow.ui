@@ -385,9 +385,9 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -457,18 +457,18 @@
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -531,9 +531,9 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -603,18 +603,18 @@
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -677,9 +677,9 @@
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -749,18 +749,18 @@
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>78</red>
-          <green>154</green>
-          <blue>6</blue>
+          <red>255</red>
+          <green>170</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -813,7 +813,7 @@
      </palette>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+     <string notr="true">QLabel { background:rgb(255, 170, 255)}</string>
     </property>
     <property name="text">
      <string>T4</string>
@@ -1154,13 +1154,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="sinal1">
+   <widget class="QLabel" name="sinal01">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>10</y>
+      <x>314</x>
+      <y>30</y>
       <width>16</width>
-      <height>51</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1170,45 +1170,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="sinal2">
+   <widget class="QLabel" name="sinal02">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>130</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal3">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>180</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal4">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>130</y>
+      <x>584</x>
+      <y>30</y>
       <width>16</width>
-      <height>51</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1218,77 +1186,13 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="sinal5">
+   <widget class="QLabel" name="sinal03">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>130</y>
+      <x>751</x>
+      <y>150</y>
       <width>16</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal6">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>10</y>
-      <width>16</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal7">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>130</y>
-      <width>16</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal8">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>130</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sinal9">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>130</y>
-      <width>16</width>
-      <height>51</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1301,10 +1205,154 @@
    <widget class="QLabel" name="sinal10">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>270</y>
+      <x>600</x>
+      <y>130</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal04">
+    <property name="geometry">
+     <rect>
+      <x>621</x>
+      <y>150</y>
       <width>16</width>
-      <height>51</height>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal05">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>150</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal06">
+    <property name="geometry">
+     <rect>
+      <x>351</x>
+      <y>150</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal07">
+    <property name="geometry">
+     <rect>
+      <x>313</x>
+      <y>150</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal08">
+    <property name="geometry">
+     <rect>
+      <x>481</x>
+      <y>287</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal09">
+    <property name="geometry">
+     <rect>
+      <x>481</x>
+      <y>150</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal11">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>167</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal12">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>167</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background:rgb(78, 154, 6)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinal13">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>133</y>
+      <width>21</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1351,16 +1399,19 @@
    <zorder>trem3P</zorder>
    <zorder>trem4P</zorder>
    <zorder>trem5P</zorder>
-   <zorder>sinal1</zorder>
-   <zorder>sinal2</zorder>
-   <zorder>sinal3</zorder>
-   <zorder>sinal4</zorder>
-   <zorder>sinal5</zorder>
-   <zorder>sinal6</zorder>
-   <zorder>sinal7</zorder>
-   <zorder>sinal8</zorder>
-   <zorder>sinal9</zorder>
+   <zorder>sinal01</zorder>
+   <zorder>sinal02</zorder>
+   <zorder>sinal03</zorder>
    <zorder>sinal10</zorder>
+   <zorder>sinal04</zorder>
+   <zorder>sinal05</zorder>
+   <zorder>sinal06</zorder>
+   <zorder>sinal07</zorder>
+   <zorder>sinal08</zorder>
+   <zorder>sinal09</zorder>
+   <zorder>sinal11</zorder>
+   <zorder>sinal12</zorder>
+   <zorder>sinal13</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -1368,7 +1419,7 @@
      <x>0</x>
      <y>0</y>
      <width>988</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

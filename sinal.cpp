@@ -4,37 +4,38 @@
 //Construtor
 Sinal::Sinal(int ID, int milisegundos, bool aberto){
     this->ID = ID;
-    this->aberto = aberto;
-    this->milisegundos = milisegundos;
+    this->estado = aberto;
+    this->tempoAcao = milisegundos;
 }
 
 //Função a ser executada após executar trem->START
 void Sinal::run(){
-
-    emit updateGUI(ID, aberto);
-    /*
-    while (true) {
-        msleep(milisegundos);
-        aberto = !aberto;
-        emit updateGUI(ID,aberto);
+    if(estado == true) {
+        this->abrir();
+    } else {
+        this->fechar();
     }
-    */
-    while(true) {
+    /*while(true) {
         msleep(200);
-    }
+    }*/
 }
 
 
 bool Sinal::estaAberto() {
-    return aberto;
+    return estado;
 }
 
 void Sinal::abrir() {
-    aberto = true;
-    emit updateGUI(ID, aberto);
+    msleep(100);
+    estado = true;
+    emit updateGUI(ID, estado);
+    msleep(tempoAcao);
+    this->fechar();
 }
 
 void Sinal::fechar() {
-    aberto = false;
-    emit updateGUI(ID, aberto);
+    estado = false;
+    emit updateGUI(ID, estado);
+    msleep(tempoAcao);
+    this->abrir();
 }

@@ -22,7 +22,7 @@ public:
 public slots:
     void updateInterface(int,int,int);
     void updateInterface(int,bool);
-    void updateInterface(int, QString);
+    //void updateInterface(int, QString);
 
 private slots:
     void on_pushButton_clicked();
@@ -30,8 +30,6 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_sliderTrem1_sliderMoved(int position);
-
-    void on_sliderTrem1_valueChanged(int value);
 
     void on_sliderTrem2_sliderMoved(int position);
 
@@ -61,8 +59,11 @@ private:
     Sinal *sinal8;
     Sinal *sinal9;
     Sinal *sinal10;
+    Sinal *sinal11;
+    Sinal *sinal12;
+    Sinal *sinal13;
 
-    QString alocar;
+    //QString alocar;
 
     TrilhoCompartilhado *trilho1;
     TrilhoCompartilhado *trilho2;
