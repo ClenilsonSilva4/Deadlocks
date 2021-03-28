@@ -7,6 +7,7 @@ Trem::Trem(int ID, int x, int y){
     this->x = x;
     this->y = y;
     this->velocidade = 100;
+    this->paradoNoSinal = false;
 }
 
 //Função a ser executada após executar trem->START
@@ -87,4 +88,11 @@ int Trem::getY() {
     return y;
 }
 
+bool Trem::getParadoNoSinal() {
+    return this->paradoNoSinal;
+}
+
+void Trem::setParadoNoSinal(bool parado) {
+    this->paradoNoSinal = parado;
+}
 

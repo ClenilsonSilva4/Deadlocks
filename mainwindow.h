@@ -5,6 +5,7 @@
 #include "trem.h"
 #include "sinal.h"
 #include "trilhoCompartilhado.h"
+#include "gerente.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +23,7 @@ public:
 public slots:
     void updateInterface(int,int,int);
     void updateInterface(int,bool);
+    void updateInterface(int);
     //void updateInterface(int, QString);
 
 private slots:
@@ -62,6 +64,8 @@ private:
     Sinal *sinal11;
     Sinal *sinal12;
     Sinal *sinal13;
+
+    Gerente *gerente;
 
     //QString alocar;
 

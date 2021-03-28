@@ -13,12 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
+    gerente.cpp \
         mainwindow.cpp \
     sinal.cpp \
     trem.cpp \
     trilhoCompartilhado.cpp
 
 HEADERS  += mainwindow.h \
+    gerente.h \
     sinal.h \
     trem.h \
     trilhoCompartilhado.h

@@ -26,11 +26,14 @@ private:
    int x;           //posição X do trem na tela
    int y;           //posição Y do trem na tela
    int ID;          //ID do trem
+   bool paradoNoSinal;
    int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
 
 public:
    int getX();
    int getY();
+   bool getParadoNoSinal();
+   void setParadoNoSinal(bool);
 };
 
 #endif // TREM_H

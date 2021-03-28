@@ -9,24 +9,26 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Cria o trem com seu (ID, posição X, posição Y)
     trem1 = new Trem(1,60,30);
-    trem2 = new Trem(2,330,30);
-    trem3 = new Trem(3,600,30);
-    trem4 = new Trem(4,190,150);
-    trem5 = new Trem(5,460,150);
+    trem2 = new Trem(2,440,30);
+    trem3 = new Trem(3,710,30);
+    trem4 = new Trem(4,350,290);
+    trem5 = new Trem(5,610,290);
 
-    sinal1 = new Sinal(1, 2000, true);
-    sinal2 = new Sinal(2, 2000, true);
-    sinal3 = new Sinal(3, 2000, false);
-    sinal4 = new Sinal(4, 2000, false);
-    sinal5 = new Sinal(5, 2000, true);
-    sinal6 = new Sinal(6, 2000, false);
-    sinal7 = new Sinal(7, 2000, false);
-    sinal8 = new Sinal(8, 2000, false);
-    sinal9 = new Sinal(9, 2000, false);
-    sinal10 = new Sinal(10, 2000, false);
-    sinal11 = new Sinal(11, 2000, true);
-    sinal12 = new Sinal(12, 2000, true);
-    sinal13 = new Sinal(13, 2000, false);
+    sinal1 = new Sinal(1, 5000, false);
+    sinal2 = new Sinal(2, 5000, false);
+    sinal3 = new Sinal(3, 5000, false);
+    sinal4 = new Sinal(4, 15000, false);
+    sinal5 = new Sinal(5, 15000, false);
+    sinal6 = new Sinal(6, 15000, false);
+    sinal7 = new Sinal(7, 15000, false);
+    sinal8 = new Sinal(8, 5000, false);
+    sinal9 = new Sinal(9, 15000, false);
+    sinal10 = new Sinal(10, 15000, false);
+    sinal11 = new Sinal(11, 15000, false);
+    sinal12 = new Sinal(12, 5000, false);
+    sinal13 = new Sinal(13, 15000, false);
+
+    gerente = new Gerente(1);
 
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
@@ -54,6 +56,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(sinal11, SIGNAL(updateGUI(int,bool)), SLOT(updateInterface(int,bool)));
     connect(sinal12, SIGNAL(updateGUI(int,bool)), SLOT(updateInterface(int,bool)));
     connect(sinal13, SIGNAL(updateGUI(int,bool)), SLOT(updateInterface(int,bool)));
+
+    connect(gerente, SIGNAL(updateGUI(int)), SLOT(updateInterface(int)));
 }
 
 //Função que será executada quando o sinal UPDATEGUI for emitido
@@ -64,8 +68,10 @@ void MainWindow::updateInterface(int id, int x, int y){
                 ui->trem1P->setText("("+QString::number(x)+","+QString::number(y)+")");
                 if(x == 290 && y == 30 && !sinal1->estaAberto()) {
                     trem1->terminate();
+                    trem1->setParadoNoSinal(true);
                 } else if(x == 330 && y == 110 && !sinal13->estaAberto()) {
                     trem1->terminate();
+                    trem1->setParadoNoSinal(true);
                 }
                 break;
             case 2: //Atualiza a posição do objeto da tela (quadrado) que representa o trem2
@@ -73,12 +79,16 @@ void MainWindow::updateInterface(int id, int x, int y){
                 ui->trem2P->setText("("+QString::number(x)+","+QString::number(y)+")");
                 if(x == 560 && y == 30 && !sinal2->estaAberto()) {
                     trem2->terminate();
+                    trem2->setParadoNoSinal(true);
                 } else if(x == 370 && y == 150 && !sinal6->estaAberto()) {
                     trem2->terminate();
+                    trem2->setParadoNoSinal(true);
                 } else if(x == 500 && y == 150 && !sinal9->estaAberto()) {
                     trem2->terminate();
+                    trem2->setParadoNoSinal(true);
                 } else if(x == 600 && y == 110 && !sinal10->estaAberto()) {
                     trem2->terminate();
+                    trem2->setParadoNoSinal(true);
                 }
                 break;
             case 3: //Atualiza a posição do objeto da tela (quadrado) que representa o trem3
@@ -86,8 +96,10 @@ void MainWindow::updateInterface(int id, int x, int y){
                 ui->trem3P->setText("("+QString::number(x)+","+QString::number(y)+")");
                 if(x == 770 && y == 150 && !sinal3->estaAberto()) {
                     trem3->terminate();
+                    trem3->setParadoNoSinal(true);
                 } else if(x == 640 && y == 150 && !sinal4->estaAberto()) {
                    trem3->terminate();
+                   trem3->setParadoNoSinal(true);
                 }
                 break;
             case 4: //Atualiza a posição do objeto da tela (quadrado) que representa o trem4
@@ -95,8 +107,10 @@ void MainWindow::updateInterface(int id, int x, int y){
                 ui->trem4P->setText("("+QString::number(x)+","+QString::number(y)+")");
                 if(x == 290 && y == 150 && !sinal7->estaAberto()) {
                     trem4->terminate();
+                    trem4->setParadoNoSinal(true);
                 } else if(x == 190 && y == 190 && !sinal12->estaAberto()) {
                     trem4->terminate();
+                    trem4->setParadoNoSinal(true);
                 }
                 break;
             case 5: //Atualiza a posição do objeto da tela (quadrado) que representa o trem5
@@ -104,10 +118,13 @@ void MainWindow::updateInterface(int id, int x, int y){
                 ui->trem5P->setText("("+QString::number(x)+","+QString::number(y)+")");
                 if(x == 560 && y == 150 && !sinal5->estaAberto()) {
                     trem5->terminate();
+                    trem5->setParadoNoSinal(true);
                 } else if(x == 500 && y == 290 && !sinal8->estaAberto()) {
                     trem5->terminate();
+                    trem5->setParadoNoSinal(true);
                 } else if(x == 460 && y == 190 && !sinal11->estaAberto()) {
                     trem5->terminate();
+                    trem5->setParadoNoSinal(true);
                 }
                 break;
             default:
@@ -122,6 +139,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal01->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem1->getX() == 290 && trem1->getY() == 30) {
                    trem1->start();
+                   trem1->setParadoNoSinal(false);
                 }
             }
             else {
@@ -133,6 +151,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal02->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem2->getX() == 560 && trem2->getY() == 30) {
                    trem2->start();
+                   trem2->setParadoNoSinal(false);
                 }
             }
             else {
@@ -144,6 +163,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal03->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem3->getX() == 770 && trem3->getY() == 150) {
                    trem3->start();
+                   trem3->setParadoNoSinal(false);
                 }
             }
             else {
@@ -155,6 +175,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal04->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem3->getX() == 640 && trem3->getY() == 150) {
                     trem3->start();
+                    trem3->setParadoNoSinal(false);
                 }
             }
             else {
@@ -166,6 +187,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal05->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem5->getX() == 560 && trem5->getY() == 150) {
                     trem5->start();
+                    trem5->setParadoNoSinal(false);
                 }
             }
             else {
@@ -177,6 +199,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal06->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem2->getX() == 370 && trem2->getY() == 150) {
                     trem2->start();
+                    trem2->setParadoNoSinal(false);
                 }
             }
             else {
@@ -188,6 +211,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal07->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem4->getX() == 290 && trem4->getY() == 150) {
                     trem4->start();
+                    trem4->setParadoNoSinal(false);
                 }
             }
             else {
@@ -199,6 +223,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal08->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem5->getX() == 500 && trem5->getY() == 290) {
                     trem5->start();
+                    trem5->setParadoNoSinal(false);
                 }
             }
             else {
@@ -210,6 +235,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal09->setStyleSheet("QLabel {background: rgb(78, 154, 6)}");
                 if(trem2->getX() == 500 && trem2->getY() == 150) {
                     trem2->start();
+                    trem2->setParadoNoSinal(false);
                 }
             }
             else {
@@ -221,6 +247,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal10->setStyleSheet("QLabel { background: rgb(78, 154, 6)}");
                 if(trem2->getX() == 600 && trem2->getY() == 110) {
                    trem2->start();
+                   trem2->setParadoNoSinal(false);
                 }
             }
             else {
@@ -232,6 +259,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal11->setStyleSheet("QLabel { background: rgb(78, 154, 6)}");
                 if(trem5->getX() == 460 && trem5->getY() == 190) {
                    trem5->start();
+                   trem5->setParadoNoSinal(false);
                 }
             }
             else {
@@ -243,6 +271,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal12->setStyleSheet("QLabel { background: rgb(78, 154, 6)}");
                 if(trem4->getX() == 190 && trem4->getY() == 190) {
                    trem4->start();
+                   trem4->setParadoNoSinal(false);
                 }
             }
             else {
@@ -254,6 +283,7 @@ void MainWindow::updateInterface(int id, bool aberto) {
                 ui->sinal13->setStyleSheet("QLabel { background: rgb(78, 154, 6)}");
                 if(trem1->getX() == 330 && trem1->getY() == 110) {
                    trem1->start();
+                   trem1->setParadoNoSinal(false);
                 }
             }
             else {
@@ -262,6 +292,42 @@ void MainWindow::updateInterface(int id, bool aberto) {
             break;
         default:
             break;
+    }
+}
+
+void MainWindow::updateInterface(int caso) {
+    switch (caso) {
+    case 1:
+        sinal1->abrir();
+        sinal3->abrir();
+        sinal4->abrir();
+        sinal7->abrir();
+        sinal10->abrir();
+        sinal13->abrir();
+        break;
+    case 2:
+        sinal2->abrir();
+        sinal10->abrir();
+        sinal5->abrir();
+        sinal9->abrir();
+        sinal6->abrir();
+        sinal13->abrir();
+        break;
+    case 3:
+        sinal12->abrir();
+        sinal7->abrir();
+        sinal6->abrir();
+        sinal11->abrir();
+        break;
+    case 4:
+        sinal8->abrir();
+        sinal11->abrir();
+        sinal9->abrir();
+        sinal5->abrir();
+        sinal4->abrir();
+        break;
+    default:
+        break;
     }
 }
 
@@ -316,6 +382,8 @@ void MainWindow::on_pushButton_clicked(){
     sinal11->start();
     sinal12->start();
     sinal13->start();
+
+    gerente->start();
 }
 
 /*
@@ -341,6 +409,8 @@ void MainWindow::on_pushButton_2_clicked(){
     sinal11->terminate();
     sinal12->terminate();
     sinal13->terminate();
+
+    gerente->terminate();
 }
 
 void MainWindow::on_sliderTrem1_sliderMoved(int position){
@@ -350,7 +420,10 @@ void MainWindow::on_sliderTrem1_sliderMoved(int position){
         trem1->terminate();
     } else {
         trem1->setVelocidade(100-position);
-        trem1->start();
+        if(!trem1->getParadoNoSinal()) {
+            trem1->start();
+        }
+
     }
 }
 
@@ -361,7 +434,9 @@ void MainWindow::on_sliderTrem2_sliderMoved(int position){
         trem2->terminate();
     } else {
         trem2->setVelocidade(100-position);
-        trem2->start();
+        if(!trem2->getParadoNoSinal()) {
+            trem2->start();
+        }
     }
 }
 
@@ -372,7 +447,9 @@ void MainWindow::on_sliderTrem3_sliderMoved(int position){
         trem3->terminate();
     } else {
         trem3->setVelocidade(100-position);
-        trem3->start();
+        if(!trem3->getParadoNoSinal()) {
+            trem3->start();
+        }
     }
 }
 
@@ -383,7 +460,9 @@ void MainWindow::on_sliderTrem4_sliderMoved(int position){
         trem4->terminate();
     } else {
         trem4->setVelocidade(100-position);
-        trem4->start();
+        if(!trem4->getParadoNoSinal()) {
+            trem4->start();
+        }
     }
 }
 
@@ -394,6 +473,8 @@ void MainWindow::on_sliderTrem5_sliderMoved(int position){
         trem5->terminate();
     } else {
         trem5->setVelocidade(100-position);
-        trem5->start();
+        if(!trem5->getParadoNoSinal()) {
+            trem5->start();
+        }
     }
 }

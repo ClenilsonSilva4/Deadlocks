@@ -15,9 +15,13 @@ void Sinal::run(){
     } else {
         this->fechar();
     }
-    /*while(true) {
+    while(true) {
         msleep(200);
-    }*/
+        if(estado) {
+            msleep(tempoAcao);
+            this->fechar();
+        }
+    }
 }
 
 
@@ -26,16 +30,13 @@ bool Sinal::estaAberto() {
 }
 
 void Sinal::abrir() {
-    msleep(100);
+    //msleep(100);
     estado = true;
     emit updateGUI(ID, estado);
-    msleep(tempoAcao);
-    this->fechar();
+
 }
 
 void Sinal::fechar() {
     estado = false;
     emit updateGUI(ID, estado);
-    msleep(tempoAcao);
-    this->abrir();
 }
