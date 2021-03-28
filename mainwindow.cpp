@@ -418,10 +418,14 @@ void MainWindow::on_sliderTrem1_sliderMoved(int position){
         trem1->setVelocidade(1);
     } else if(position == 0) {
         trem1->terminate();
+        if(gerente->isRunning() && !trem1->getParadoNoSinal()) {
+            gerente->terminate();
+        }
     } else {
         trem1->setVelocidade(100-position);
         if(!trem1->getParadoNoSinal()) {
             trem1->start();
+            gerente->start();
         }
 
     }
@@ -432,10 +436,14 @@ void MainWindow::on_sliderTrem2_sliderMoved(int position){
         trem2->setVelocidade(1);
     } else if(position == 0) {
         trem2->terminate();
+        if(gerente->isRunning() && !trem2->getParadoNoSinal()) {
+            gerente->terminate();
+        }
     } else {
         trem2->setVelocidade(100-position);
         if(!trem2->getParadoNoSinal()) {
             trem2->start();
+            gerente->start();
         }
     }
 }
@@ -445,10 +453,14 @@ void MainWindow::on_sliderTrem3_sliderMoved(int position){
         trem3->setVelocidade(1);
     } else if(position == 0) {
         trem3->terminate();
+        if(gerente->isRunning() && !trem3->getParadoNoSinal()) {
+            gerente->terminate();
+        }
     } else {
         trem3->setVelocidade(100-position);
         if(!trem3->getParadoNoSinal()) {
             trem3->start();
+            gerente->start();
         }
     }
 }
@@ -458,10 +470,14 @@ void MainWindow::on_sliderTrem4_sliderMoved(int position){
         trem4->setVelocidade(1);
     } else if(position == 0) {
         trem4->terminate();
+        if(gerente->isRunning() && !trem4->getParadoNoSinal()) {
+            gerente->terminate();
+        }
     } else {
         trem4->setVelocidade(100-position);
         if(!trem4->getParadoNoSinal()) {
             trem4->start();
+            gerente->start();
         }
     }
 }
@@ -471,10 +487,14 @@ void MainWindow::on_sliderTrem5_sliderMoved(int position){
         trem5->setVelocidade(1);
     } else if(position == 0) {
         trem5->terminate();
+        if(gerente->isRunning() && !trem5->getParadoNoSinal()) {
+            gerente->terminate();
+        }
     } else {
         trem5->setVelocidade(100-position);
         if(!trem5->getParadoNoSinal()) {
             trem5->start();
+            gerente->start();
         }
     }
 }
